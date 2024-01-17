@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJ Worldwide Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: linear-gradient(135deg, #001f3f, #003366);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            margin-right: 10px;
+        }
+
+        header img {
+            width: 40px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        section h2 {
+            color: #ffd700;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #004080;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ffd700;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #004080;
+            transform: scale(1.2);
+        }
+
+        .mobile-sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 2;
+        }
+
+        .mobile-sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffd700;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-sidebar a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        .mobile-sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .mobile-sidebar .close-btn:hover {
+            color: #004080;
+        }
+
+        .mobile-toggle {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            z-index: 3;
+            transition: color 0.3s;
+        }
+
+        .mobile-toggle:hover {
+            color: #004080;
+        }
+
+        /* Button Animation */
+        .cool-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cool-btn:hover {
+            background-color: #ffd700;
+            color: #004080;
+        }
+
+        .cool-btn::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(45deg, #ffd700, #004080);
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.3s;
+        }
+
+        .cool-btn:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-sidebar {
+                display: block;
+            }
+
+            .mobile-toggle {
+                top: 60px;
+            }
+
+            header img {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KJ Worldwide Services</h1>
+        <img src="title.png" alt="Icon Image">
+        <p style="font-size: 1.2em; margin: 10px 0 0;">In Collaboration with Rotary Club KL Sentral</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toggle" onclick="openSidebar()">&#9776;</div>
+
+    <section>
+        <h2 style="color: #ffd700;">Welcome to KJ Worldwide Services</h2>
+        <p>We are proud to be in collaboration with Rotary Club KL Sentral. Together, we share a common vision and commitment to making a positive impact through our activities and projects.</p>
+        <p>Rotary Club of KL Sentral also shares its vision, focusing on strengthening the club, fostering togetherness among members, and creating public awareness about their projects. As members of this vibrant community, your support is crucial to the success of our shared endeavors.</p>
+        <p>Thank you for being a part of our journey. Imagine Rotary!</p>
+
+        
+
+        <!-- Cool Button with Animation -->
+        <a href="ROS PROFILE.pdf" class="cool-btn" download>get more info </a>
+    </section>
+
+    <footer>
+        <!-- Updated social icons and sidebar toggle -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/KJWorldwideServices" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/KJWorldwideServices" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Sidebar toggle button -->
+        <div class="mobile-sidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&#10005;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <p style="margin: 0;">Partnered with Rotary Club KL Sentral (PPM-011-14-28102022)</p>
+        <p style="margin: 0;">&copy; 2024 KJ Worldwide Services</p>
+    </footer>
+
+    <!-- JavaScript for sidebar functionality -->
+    <script>
+        function openSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '250px';
+        }
+
+        function closeSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '0';
+        }
+    </script>
+
+<script>
+
+    const cvDownloadLink = document.getElementById('cv-download');
+    cvDownloadLink.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'ROS PROFILE.pdf';
+        link.download = 'ROS PROFILE.pdf';
+        link.click();
+    });
+</script>
+
+
+</body>
+</html>

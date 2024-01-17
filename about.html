@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - KJ Worldwide Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: linear-gradient(135deg, #001f3f, #003366);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            margin-right: 10px;
+        }
+
+        header img {
+            width: 40px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        section h2 {
+            color: #ffd700;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #004080;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ffd700;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #004080;
+            transform: scale(1.2);
+        }
+
+        .mobile-sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 2;
+        }
+
+        .mobile-sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffd700;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-sidebar a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        .mobile-sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .mobile-sidebar .close-btn:hover {
+            color: #004080;
+        }
+
+        .mobile-toggle {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            z-index: 3;
+            transition: color 0.3s;
+        }
+
+        .mobile-toggle:hover {
+            color: #004080;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-sidebar {
+                display: block;
+            }
+
+            .mobile-toggle {
+                top: 60px;
+            }
+
+            header img {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KJ Worldwide Services</h1>
+        <img src="title.png" alt="Icon Image">
+        <p style="font-size: 1em; margin: 10px 0 0;">In Collaboration with Rotary Club KL Sentral</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toggle" onclick="openSidebar()">&#9776;</div>
+
+    <section id="company-about">
+        <h2>About</h2>
+        <p>KJ WORLDWIDE SERVICES was established as a result of the combination of sewing experts who have decades of years of experience in the sewing industry. KJ WORLDWIDE SERVICES expertise is in the field of sewing coats, blazers, convo robes, imam robes, corporate shirts, uniformed clothes, baju melayu, and baju kurung. KJ WORLDWIDE SERVICES was officially established on 07 September 2017 with registration no SA0438863-H and is a sole ownership business. The business is currently operating in I-02-01, Jalan PPK 2, Pusat Perniagaan Kinrara, Taman Kinrara Seksyen 3, 47100 Puchong Selangor, and C-02-05, Jalan PPK 1, Pusat Perniagaan Kinrara, Taman Kinrara Seksyen 3, 47100 Puchong Selangor. KJ WORLDWIDE SERVICES operates as a sewing service company of various types of clothing, embroidery, printing, and being a clothing supplier.</p>
+        <img src="ppl.png" alt="People Working" style="max-width: 100%; height: auto; margin-top: 15px;">
+    </section>
+
+    <section id="mission-vision">
+        <h2>Mission & Vision</h2>
+        <p>Our mission is to Our mission to always be committed in carrying out our expertise at the level that best and effective all the time and ensure that it gives the effect/impact maximum to each customer </p>
+        <p>The main <b>vision</b> of KJ WORLDWIDE SERVICES company will continue to strive to perform tasks better and more efficient in addition to being able to provide profit to the company. To be a committed, effective, and viable company in this service. Ensure construction work is done according to the standards that have been set. become an expert and competent tailor in the sewing field and giving a comprehensive specific focus by creating a quality and satisfying service network and being able to provide job opportunities.
+        </p>
+    </section>
+
+    <section id="committee">
+    <h2>Committee</h2>
+    <p><strong>Charter President:</strong> RTN Angelina Arokiasamy</p>
+    <p><strong>Club Secretary:</strong> RTN Celina</p>
+    <p><strong>Club Treasurer:</strong> RTN Sherena</p>
+    <p><strong>Public Image:</strong> RTN Anthony Row</p>
+    <p><strong>Membership Director:</strong> RTN Roza</p>
+    <p><strong>Service Projects Director:</strong> RTN Vicky</p>
+    <p><strong>Youth Service Director:</strong> RTN Pre</p>
+</section>
+    <footer>
+        <!-- Updated social icons and sidebar toggle -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/KJWorldwideServices" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/KJWorldwideServices" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Sidebar toggle button -->
+        <div class="mobile-sidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&#10005;</a>
+            <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        
+        <p style="margin: 0;">Partnered with Rotary Club KL Sentral (PPM-011-14-28102022)</p>
+        <p style="margin: 0;">&copy; 2024 KJ Worldwide Services</p>
+    </footer>
+
+    <!-- JavaScript for sidebar functionality -->
+    <script>
+        function openSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '250px';
+        }
+
+        function closeSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '0';
+        }
+    </script>
+
+</body>
+</html>

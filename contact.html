@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - KJ Worldwide Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: linear-gradient(135deg, #001f3f, #003366);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            margin-right: 10px;
+        }
+
+        header img {
+            width: 40px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        section h2 {
+            color: #ffd700;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #003366, #004080);
+            color: #ffd700;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #004080;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #ffd700;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #004080;
+            transform: scale(1.2);
+        }
+
+        .mobile-sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(135deg, #00274d, #003366);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 2;
+        }
+
+        .mobile-sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffd700;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-sidebar a:hover {
+            background-color: #004080;
+            color: #ffd700;
+        }
+
+        .mobile-sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .mobile-sidebar .close-btn:hover {
+            color: #004080;
+        }
+
+        .mobile-toggle {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            color: #ffd700;
+            cursor: pointer;
+            z-index: 3;
+            transition: color 0.3s;
+        }
+
+        .mobile-toggle:hover {
+            color: #004080;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-sidebar {
+                display: block;
+            }
+
+            .mobile-toggle {
+                top: 60px;
+            }
+
+            header img {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>KJ Worldwide Services</h1>
+        <img src="title.png" alt="Icon Image">
+        <p style="font-size: 1em; margin: 10px 0 0;">In Collaboration with Rotary Club KL Sentral</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toggle" onclick="openSidebar()">&#9776;</div>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries or information. We are here to assist you.</p>
+        <p><strong>Email:</strong> kjworldwideservices17@gmail.com</p>
+        <p><strong>Phone:</strong> +6011-31907408 / +6013-7485292</p>
+        <p><strong>Office Phone:</strong> +603-8082 5680</p>
+        <p><strong>Address:</strong><br>
+            I-02-01 BLOCK I, JALAN PPK 2<br>
+            TAMAN KINRARA SEKSYEN 3<br>
+            47100 PUCHONG SELANGOR.<br>
+            C-2-05 BLOCK C, JALAN PPK 1<br>
+            TAMAN KINRARA SEKSYEN 3<br>
+            47100 PUCHONG SELANGOR.</p>
+    </section>
+
+    <footer>
+        <!-- Updated social icons and sidebar toggle -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/KJWorldwideServices" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/KJWorldwideServices" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Sidebar toggle button -->
+        <div class="mobile-sidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&#10005;</a>
+            <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        </div>
+
+        <p style="margin: 0;">Partnered with Rotary Club KL Sentral (PPM-011-14-28102022)</p>
+        <p style="margin: 0;">&copy; 2024 KJ Worldwide Services</p>
+    </footer>
+
+    <!-- JavaScript for sidebar functionality -->
+    <script>
+        function openSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '250px';
+        }
+
+        function closeSidebar() {
+            document.querySelector('.mobile-sidebar').style.width = '0';
+        }
+    </script>
+
+</body>
+
+</html>
